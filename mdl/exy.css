@@ -16,6 +16,17 @@
      your background is light. */
   color: white;
 }
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('https://exybore.becauseofprog.fr/img/code.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
 
 /*.exy-navigation__infos {
   background-color: #CCCCCC;
