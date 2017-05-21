@@ -1,14 +1,14 @@
 .carte-intro > .mdl-card__title {
   color: #fff;
   height: 176px;
-  background: url('https://exybore.becauseofprog.fr/img/code.jpg') center / cover;
+  background: url('https://exybore.github.io/img/code.jpg') center / cover;
 }
 .carte-intro > .mdl-card__menu {
   color: #fff;
 }
 
 .principal-layout {
-  background: url('https://exybore.becauseofprog.fr/img/back.jpg') center / cover;
+  background: url('https://exybore.github.io/img/back.jpg') center / cover;
 }
 .principal-layout .mdl-layout__header,
 .principal-layout .mdl-layout__drawer-button {
@@ -22,7 +22,7 @@
 .demo-card-wide > .mdl-card__title {
   color: #fff;
   height: 176px;
-  background: url('https://exybore.becauseofprog.fr/img/code.jpg') center / cover;
+  background: url('https://exybore.github.io/img/code.jpg') center / cover;
 }
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
