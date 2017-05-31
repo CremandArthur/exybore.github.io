@@ -1,137 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Exybore</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="https://exybore.github.io/mdl/material.min.css" />
-    <link rel="stylesheet" href="https://exybore.github.io/mdl/exy.css" />
-    <script defer src="https://exybore.github.io/mdl/material.min.js"></script>
-    <script defer src="https://exybore.github.io/mdl/exy.js"></script>
+    <link rel="stylesheet" href="css/perso.css" />
+    <script src="js/exy.js" type="text/css"></script>
+
+    <link rel="icon" href="img/profil.png" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta charset="utf-8" />
-
-    <link rel="icon" href="https://exybore.github.io/img/profil.png">
-
-    <meta name="twitter:card" content="summary">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://exybore.github.io">
-    <meta property="og:locale" content="fr_fr">
-    <meta property="og:title" content="Exybore - GitHub">
-    <meta property="og:description" name="description" content="GitHub Pages of Exybore">
-    <meta property="og:image" content="https://exybore.github.io/img/bop.png">
-    <meta name="author" content="Exybore">
-    <meta name="twitter:creator" content="@Exybore">
-
-    <title>Home - Exybore</title>
   </head>
 
   <body>
 
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout__title">Exybore - GitHub</span>
-        </div>
-      </header>
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout__title">Menu</span>
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="/">Home</a>
-          <a class="mdl-navigation__link" href="/exycss">ExyCSS</a>
-          <a class="mdl-navigation__link" href="/projects">Projects</a>
-          <a class="mdl-navigation__link" href="/social">Social networks</a>
-          <a class="mdl-navigation__link" href="/about">About</a>
-        </nav>
-      </div>
+    <script>
 
-      <main class="mdl-layout__content principal-layout">
-        <div class="mdl-grid">
+    window.onload=function(){
+      var mobileBtn = document.querySelector("header div.exy-header__mobile-menu a.exy-header__mobile-btn");
+      mobileBtn.addEventListener("click", function () {
+        var mobileNav = document.querySelector("ul.exy-header__mobile-nav");
+        mobileNav.style.display = "block";
+        var mobileNavFlex = document.querySelector("ul.exy-header__mobile-nav.exy-header__oneline-mobile");
+        mobileNavFlex.style.display = "flex";
+      });
+      var mobileClose = document.querySelector("ul.exy-header__mobile-nav a.exy-header__close-mobile");
+      mobileClose.addEventListener("click", function () {
+        var mobileNav = document.querySelector("ul.exy-header__mobile-nav");
+        mobileNav.style.display = "none";
+      });
+    }
 
-          <div class="carte-intro mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-cell--middle mdl-card mdl-shadow--2dp">
-            <div class="mdl-card__title">
-              <h2 class="mdl-card__title-text">Welcome !</h2>
-            </div>
-            <div class="mdl-card__supporting-text">
-              You're on the GitHub Pages of Exybore. See projects of him and his social networks for any contact.
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/social">
-                Contact
-              </a>
-            </div>
-          </div>
 
-          <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-cell--middle mdl-card mdl-shadow--2dp">
-            <div class="mdl-card__title">
-              <h2 class="mdl-card__title-text">ExyCSS</h2>
-            </div>
-            <div class="mdl-card__supporting-text">
-              Simple and flexible CSS framework, ExyCSS allows you to design beautiful websites. See all components and method to start creating yours.
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/exycss">
-                More infos
-              </a>
-            </div>
-          </div>
+    </script>
 
-        </div>
+    <div class="first-div">
 
-        <footer class="mdl-mega-footer">
-          <div class="mdl-mega-footer__middle-section">
+      <img src="img/profil.png" alt="profil img" />
 
-            <div class="mdl-mega-footer__drop-down-section">
-              <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
-              <h1 class="mdl-mega-footer__heading">Sitemap</h1>
-              <ul class="mdl-mega-footer__link-list">
-                <li><a href="/">Home</a></li>
-                <li><a href="/exycss">ExyCSS</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/social">Social networks</a></li>
-                <li><a href="/about">About</a></li>
-              </ul>
-            </div>
+      <h1>Exybore - Dev Projects</h1>
+      <h3>Enter in the programming world</h3>
 
-            <div class="mdl-mega-footer__drop-down-section">
-              <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
-              <h1 class="mdl-mega-footer__heading">Contact</h1>
-              <ul class="mdl-mega-footer__link-list">
-                <li><a href="https://twitter.com/exybore">Twitter</a></li>
-                <li><script type=text/javascript>
-                  var name = "exybore";
-                  var domain = "becauseofprog.fr";
-                  document.write('<a href="mailto:' + name + '@' + domain + '">') ;
-                  document.write('Email</a>') ;
-                </script></li>
-                <li><a href="https://discord.becauseofprog.fr">Discord</a></li>
-                <li><a href="https://gitter.im/exybore/lobby">Gitter</a></li>
-                <li><a href="https://github.com/exybore">GitHub</a></li>
-              </ul>
-            </div>
+      <!--<a href="about" class="flat-button">Contact</a>-->
 
-            <div class="mdl-mega-footer__drop-down-section">
-              <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
-              <h1 class="mdl-mega-footer__heading">Attributions</h1>
-              <ul class="mdl-mega-footer__link-list">
-                <li><a href="https://twitter.com/exybore">Developed by Exybore</a></li>
-                <li><a href="http://www.freepik.com">Fond vectoriel par Freepik</a></li>
-                <li><a href="https://becauseofprog.fr">Hosted by GitHub Pages</li>
-              </ul>
-            </div>
-
-          </div>
-
-          <div class="mdl-mega-footer__bottom-section">
-            <div class="mdl-logo">Exybore</div>
-            <ul class="mdl-mega-footer__link-list">
-              <li><a href="/about">About</a></li>
-            </ul>
-          </div>
-
-        </footer>
-
-      </main>
     </div>
 
+    <header>
+      <div class="exy-header__mobile-menu">
+        <a class="exy-header__mobile-btn" href="#!"><i class="material-icons">menu</i></a>
+      </div>
+      <div class="exy-header__titler">
+        <span class="exy-header__title">Exybore</span>
+      </div>
+      <div class="exy-header__link-container">
+        <a href="#!" class="exy-header__link">Home</a>
+        <a href="#!" class="exy-header__link">Projects</a>
+        <a href="#!" class="exy-header__link">Social</a>
+        <a href="#!" class="exy-header__link">About</a>
+      </div>
+    </header>
+    <ul class="exy-header__mobile-nav">
+      <li><a href="#!" class="exy-header__link">Home</a></li>
+      <li><a href="#!" class="exy-header__link">Projects</a></li>
+      <li><a href="#!" class="exy-header__link">Social</a></li>
+      <li><a href="#!" class="exy-header__link">About</a></li>
+      <li><a href="#!" class="exy-header__link exy-header__close-mobile"><i class="material-icons">close</i></a></li>
+    </ul>
+
+    <div class="main-content">
+
+      <h2>Discover the last projects</h2>
+
+      <p>There is many projects on this website and you can choose to contribute to them, or simply download them for testing and using at home.
+
+      <div class="presentation">
+
+        <div class="tile">
+          <div class="tile-img">
+            <img src="icons/fork.png" alt="Icon made by Dave Gandy from www.flaticon.com" />
+          </div>
+          <h3>Open-Source</h3>
+          <p>Everyone can contribue to the projects and make them growing up</p>
+        </div>
+        <hr class="sep" />
+
+        <div class="tile">
+          <div class="tile-img">
+            <img src="icons/check.png" alt="Icon made by Maxim Basinski from www.flaticon.com" />
+          </div>
+          <h3>Simple</h3>
+          <p>Everything is correctly documented so you aren't disapointed</p>
+        </div>
+
+        <hr class="sep" />
+
+        <div class="tile">
+          <div class="tile-img">
+            <img src="icons/heart.png" alt="Icon made by Pixel Buddha from www.flaticon.com" />
+          </div>
+          <h3>Useful</h3>
+          <p>Projects can be combinated with yours to make a powerful final project</p>
+        </div>
+
+      </div>
+
+      <div class="btn-container">
+
+        <div class="flat-btn">
+          <a href="/projects">Go to the projects page</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="main-content darken">
+
+      <h2>The last news</h2>
+
+      <p>Here is the most important news provided from social networks. If you want more contact, go to the <a href="social">social networks</a> page.
+
+      <div class="presentation">
+
+        <div class="tile">
+          <h3>Twitter</h3>
+          <p>My news place, where I offen post informations or other fun stuff. You can tweet me for any question !</p>
+         <a class="twitter-timeline" href="https://twitter.com/exybore">Tweets by exybore</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <div class="tile">
+          <h3>Discord</h3>
+          <p>Want quick support, help or question ? Just join the Discord server right here ! You can also chat with the community</p>
+          <iframe src="https://discordapp.com/widget?id=314802583128768512&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+        </div>
+
+        <div class="tile">
+          <h3>BecauseOfProg</h3>
+          <p>This is my french blog, with other members. You can found numeric and informatic news, and programming courses.</p>
+          <a class="twitter-timeline" href="https://twitter.com/BecauseOfProg">Tweets by BecauseOfProg</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      <div class="exy-footer__titler">
+        <img src="img/profil.png" alt="Logo" class="exy-footer__logo exy-img__round" />
+        <span class="exy-footer__title">Exybore</span>
+      </div>
+      <div class="exy-footer__info-container">
+        <span class="exy-footer__info-container-title">Sitemap</span>
+        <ul class="exy-footer__list">
+          <li><a href="/" class="exy-footer__link">Home</a></li>
+          <li><a href="/projects" class="exy-footer__link">Projects</a></li>
+          <li><a href="/social" class="exy-footer__link">Social</a></li>
+          <li><a href="/about" class="exy-footer__link">About</a></li>
+        </ul>
+      </div>
+      <div class="exy-footer__info-container">
+        <span class="exy-footer__info-container-title">Contact</span>
+        <ul class="exy-footer__list">
+          <li><a class="exy-footer__link" href="mailto:exybore@becauseofprog.fr">Email</a></li>
+          <li><a class="exy-footer__link" href="https://twitter.com/exybore">Twitter</a></li>
+          <li><a class="exy-footer__link" href="https://github.com/Exybore">GitHub</a></li>
+          <li><a class="exy-footer__link" href="https://gitter.im/exybore/lobby">Gitter</a></li>
+          <li><a class="exy-footer__link" href="https://discord.gg/DhE3vaC">Discord</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

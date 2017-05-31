@@ -1,0 +1,317 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+a {
+  color: #039be5;
+}
+body {
+    margin: 0px;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/site.jpg");
+    background-repeat: no-repeat;
+    background-position: fixed;
+}
+div.first-div {
+    
+    background-size: cover;
+    height: 638px;
+    color: #fff;
+    text-align: center;
+}
+
+div.first-div img {
+    height: 130px;
+    width: 130px;
+    border-radius: 1000000px;
+    margin-top: 130px;
+    
+}
+
+div.first-div h1 {
+    text-align: center;
+    /*margin-top: 200px;*/
+    font-size: 50px;
+}
+div.first-div h3 {
+    text-align: center;
+    margin: auto;
+    font-size: 27px;
+}
+div.first-div a.flat-button { 
+    padding: 12px 30px 12px 30px;
+    background-color: #2A94B8;
+    margin: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* mobile nav DON'T SHOW IT */
+ul.exy-header__mobile-nav {
+  display: none;
+  list-style-type: none;
+
+  margin: 0px;
+  padding-left: 5px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  justify-content: space-around;
+
+  border-bottom: 5px;
+  border-color: grey;
+  border-width: 1px;
+
+  background-color: #40B6DE; 
+}
+ul.exy-header__mobile-nav li {
+  margin: 10px;
+}
+ul.exy-header__mobile-nav.exy-header__oneline-mobile li {
+  margin: 2px;
+}
+ul.exy-header__mobile-nav a.exy-header__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+/* header container */
+header {
+  padding: 3px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2A94B8;
+}
+
+/* title box */
+header div.exy-header__titler {
+  display: flex;
+  align-items: center;
+}
+
+/* title */
+header div.exy-header__titler span.exy-header__title {
+  font-weight: 400;
+  color: #fff;
+  font-size: 30px;
+  margin-left: 5px;
+}
+header div.exy-header__titler span.exy-header__title a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+/* logo */
+header div.exy-header__titler img.exy-header__logo {
+  height: 40px;
+  width: 40px;
+}
+
+@media screen and (min-width: 600px) {
+  /* link container */
+  header div.exy-header__link-container {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Link */
+  header div.exy-header__link-container a.exy-header__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+
+  }
+
+  /* mobile button */
+  header div.exy-header__mobile-menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+
+  /* title */
+  header div.exy-header__titler img.exy-header__logo {
+    margin-left: -5px;
+  }
+
+  /* header container */
+  header {
+    justify-content: space-between;
+  }
+
+  /* link container */
+  header div.exy-header__link-container a.exy-header__link {
+    display: none;
+  }
+
+  /* mobile button */
+  header div.exy-header__mobile-menu {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+
+  }
+  header div.exy-header__mobile-menu a.exy-header__mobile-btn {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+div.main-content {
+    background-color: #E3E3E3;
+    height: 100%;
+    margin: 0px;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+div.main-content.darken {
+    background-color: #C7C7C7;
+}
+div.main-content h2 {
+    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    font-size: 40px;
+    text-align: center;
+}
+div.main-content div.presentation {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 60px;
+}
+div.main-content div.presentation div.tile {
+    max-width: 30%;
+    min-width: 30%;
+}
+div.main-content div.presentation div.tile div.tile-img {
+    
+    border-radius: 100000px;
+    
+}
+div.main-content div.presentation div.tile div.tile-img img {
+    width: 150px;
+    width: 150px;
+}
+div.main-content div.presentation div.tile div.tile-img img:hover {
+
+}
+hr.sep {
+    display: none;
+}
+
+div.main-content div.presentation div.tile h3 {
+    font-size: 30px;
+}
+@media screen and (max-width: 600px) {
+    div.main-content div.presentation {
+        flex-direction: column;
+    }
+    div.main-content div.presentation div.tile {
+    max-width: 100%;
+    min-width: 100%;
+    }
+    hr.sep {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    div.main-content div.presentation {
+        justify-content: space-around;
+    }
+}
+
+div.main-content div.btn-container {
+    text-align: center;
+    margin-top: 40px;
+}
+div.main-content div.btn-container div.flat-btn a {
+    padding: 12px 40px 12px 40px;
+    background-color: #2A94B8;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    border-radius: 3px;
+    box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
+}
+div.main-content div.btn-container div.flat-btn a:hover {
+    box-shadow: 6px 6px 30px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 6px 30px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 30px 0px rgba(0,0,0,0.75);
+    transition: 0.5s;
+}
+
+footer {
+  padding: 45px;
+  height: auto;
+  color: #fff;
+  background-color: #4F4F4F;
+  display: flex;
+  justify-content: space-around;
+
+}
+footer div.exy-footer__titler {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+footer div.exy-footer__titler img.exy-footer__logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 13155625px;
+}
+footer div.exy-footer__titler span.exy-footer__title {
+  margin-left: 6px;
+  font-size: 20px;
+  font-weight: 500;
+}
+footer div.exy-footer__info-container span.exy-footer__info-container-title {
+  text-decoration: underline;
+  font-size: 17px;
+
+}
+footer div.exy-footer__info-container ul.exy-footer__list {
+  list-style-type: none;
+  font-size: 15px;
+  padding: 0px;
+}
+footer div.exy-footer__info-container ul.exy-footer__list li {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-weight: lighter;
+}
+footer div.exy-footer__info-container ul.exy-footer__list li a.exy-footer__link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400 !important;
+}
+@media screen and (max-width: 600px) {
+
+  footer {
+    display: flex;
+    flex-direction: column;
+
+    height: auto;
+    padding: 30px;
+
+    justify-content: center;
+    align-items: center;
+  }
+  footer div.exy-footer__info-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
