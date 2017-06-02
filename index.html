@@ -6,7 +6,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="css/perso.css" />
-    <script src="js/exy.js" type="text/css"></script>
 
     <link rel="icon" href="img/profil.png" />
 
@@ -17,32 +16,23 @@
 
   <body>
 
-    <script>
-
-    window.onload=function(){
-      var mobileBtn = document.querySelector("header div.exy-header__mobile-menu a.exy-header__mobile-btn");
-      mobileBtn.addEventListener("click", function () {
-        var mobileNav = document.querySelector("ul.exy-header__mobile-nav");
-        mobileNav.style.display = "block";
-        var mobileNavFlex = document.querySelector("ul.exy-header__mobile-nav.exy-header__oneline-mobile");
-        mobileNavFlex.style.display = "flex";
-      });
-      var mobileClose = document.querySelector("ul.exy-header__mobile-nav a.exy-header__close-mobile");
-      mobileClose.addEventListener("click", function () {
-        var mobileNav = document.querySelector("ul.exy-header__mobile-nav");
-        mobileNav.style.display = "none";
-      });
-    }
-
-
-    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/exy.js"></script>
 
     <div class="first-div">
 
       <img src="img/profil.png" alt="profil img" />
 
-      <h1>Exybore - Dev Projects</h1>
-      <h3>Immerse yourself in the wonderful world of program</h3>
+      <h1 id="trad-mainTitle"></h1>
+      <h3 id="trad-description"></h3>
+
+      <div class="switch-lang">
+        
+          <img src="icons/uk.png" alt="UK flag // Made by Freepik on http://www.flaticon.com" id="switch-en">
+          <img src="icons/france.png" alt="France flag // Made by Freepik on http://www.flaticon.com" id="switch-fr">
+          <img src="icons/spain.png" alt="Spain flag // Made by Freepik on http://www.flaticon.com" id="switch-es">
+
+      </div>
 
       <!--<a href="about" class="flat-button">Contact</a>-->
 
@@ -56,25 +46,25 @@
         <span class="exy-header__title">Exybore</span>
       </div>
       <div class="exy-header__link-container">
-        <a href="#!" class="exy-header__link">Home</a>
-        <a href="#!" class="exy-header__link">Projects</a>
-        <a href="#!" class="exy-header__link">Social</a>
-        <a href="#!" class="exy-header__link">About</a>
+        <a href="#!" class="exy-header__link" id="trad-home"></a>
+        <a href="#!" class="exy-header__link" id="trad-projects"></a>
+        <a href="#!" class="exy-header__link" id="trad-social"></a>
+        <a href="#!" class="exy-header__link" id="trad-about"></a>
       </div>
     </header>
     <ul class="exy-header__mobile-nav">
-      <li><a href="#!" class="exy-header__link">Home</a></li>
-      <li><a href="#!" class="exy-header__link">Projects</a></li>
-      <li><a href="#!" class="exy-header__link">Social</a></li>
-      <li><a href="#!" class="exy-header__link">About</a></li>
+      <li><a href="#!" class="exy-header__link" id="trad-home"></a></li>
+      <li><a href="#!" class="exy-header__link" id="trad-projects"></a></li>
+      <li><a href="#!" class="exy-header__link" id="trad-social"></a></li>
+      <li><a href="#!" class="exy-header__link" id="trad-about"></a></li>
       <li><a href="#!" class="exy-header__link exy-header__close-mobile"><i class="material-icons">close</i></a></li>
     </ul>
 
     <div class="main-content">
 
-      <h2>Discover the last projects</h2>
+      <h2 id="trad-discover"></h2>
 
-      <p>There are many projects on this website and you can choose to contribute to them, or simply download them for testing and using at home.
+      <p id="trad-discoverDesc"></p>
 
       <div class="presentation">
 
@@ -82,8 +72,8 @@
           <div class="tile-img">
             <img src="icons/fork.png" alt="Icon made by Dave Gandy from www.flaticon.com" />
           </div>
-          <h3>Open-Source</h3>
-          <p>Everyone can contribute for the projects and make them growing up</p>
+          <h3 id="trad-openSource"></h3>
+          <p id="trad-openSourceDesc"></p>
         </div>
         <hr class="sep" />
 
@@ -91,18 +81,18 @@
           <div class="tile-img">
             <img src="icons/check.png" alt="Icon made by Maxim Basinski from www.flaticon.com" />
           </div>
-          <h3>Simple</h3>
-          <p>Everything is correctly documented so you aren't disappointed</p>
+          <h3 id="trad-simple"></h3>
+          <p id="trad-simpleDesc"></p>
         </div>
 
         <hr class="sep" />
 
         <div class="tile">
           <div class="tile-img">
-            <img src="icons/heart.png" alt="Icon made by Pixel Buddha from www.flaticon.com" />
+            <img src="icons/like.png" alt="Like // Icon made by Madebyoliver from www.flaticon.com">
           </div>
-          <h3>Useful</h3>
-          <p>Projects can be combinated with yours to make a powerful final project</p>
+          <h3 id="trad-useful"></h3>
+          <p id="trad-usefulDesc"></p>
         </div>
 
       </div>
@@ -110,7 +100,7 @@
       <div class="btn-container">
 
         <div class="flat-btn">
-          <a href="/projects">Go to the projects page</a>
+          <a href="/projects" id="trad-gotoProjects"></a>
         </div>
 
       </div>
@@ -119,31 +109,48 @@
 
     <div class="main-content darken">
 
-      <h2>The last news</h2>
+      <h2 id="trad-news"></h2>
 
-      <p>Here is the most important news provided from social networks. If you want more contacts, go to the <a href="social">social networks</a> page.
+      <p id="trad-newsDesc"></p>
 
       <div class="presentation">
 
         <div class="tile">
-          <h3>Twitter</h3>
-          <p>My news place, where I often post informations or other fun stuff. You can tweet me for any question !</p>
+          <h3 id="trad-twitter"></h3>
+          <p id="trad-twitterDesc"></p>
          <a class="twitter-timeline" data-lang="fr" data-height="500" href="https://twitter.com/exybore">Tweets by exybore</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
 
         <div class="tile">
-          <h3>Discord</h3>
-          <p>Want quick support, help or question ? Just join the Discord server right here ! You can also chat with the community</p>
+          <h3 id="trad-discord"></h3>
+          <p id="trad-discordDesc"></p>
           <iframe src="https://discordapp.com/widget?id=314802583128768512&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
         </div>
 
         <div class="tile">
-          <h3>BecauseOfProg</h3>
-          <p>This is my french blog, with other members. You can found numeric and informatic news, and programming courses.</p>
+          <h3 id="trad-bop"></h3>
+          <p id="trad-bopDesc"></p>
           <a class="twitter-timeline" data-lang="fr" data-height="500" href="https://twitter.com/BecauseOfProg">Tweets by BecauseOfProg</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
 
       </div>
+    </div>
+
+    <div class="main-content before-footer center">
+
+      <h2 id="trad-translate"></h2>
+
+      <p id="trad-translateDesc" class="center"></p>
+
+      <div class="switch-lang">
+        
+          <img src="icons/uk.png" alt="UK flag // Made by Freepik on http://www.flaticon.com">
+          <img src="icons/france.png" alt="France flag // Made by Freepik on http://www.flaticon.com">
+          <img src="icons/spain.png" alt="Spain flag // Made by Freepik on http://www.flaticon.com">
+          <img src="icons/like.png" alt="Like // Icon made by Madebyoliver from www.flaticon.com">
+
+      </div>
+
     </div>
 
     <footer>
@@ -152,16 +159,16 @@
         <span class="exy-footer__title">Exybore</span>
       </div>
       <div class="exy-footer__info-container">
-        <span class="exy-footer__info-container-title">Sitemap</span>
+        <span class="exy-footer__info-container-title" id="trad-sitemap"></span>
         <ul class="exy-footer__list">
-          <li><a href="/" class="exy-footer__link">Home</a></li>
-          <li><a href="/projects" class="exy-footer__link">Projects</a></li>
-          <li><a href="/social" class="exy-footer__link">Social</a></li>
-          <li><a href="/about" class="exy-footer__link">About</a></li>
+          <li><a href="/" class="exy-footer__link" id="trad-home-2"></a></li>
+          <li><a href="/projects" class="exy-footer__link" id="trad-projects-2"></a></li>
+          <li><a href="/social" class="exy-footer__link" id="trad-social-2"></a></li>
+          <li><a href="/about" class="exy-footer__link" id="trad-about-2"></a></li>
         </ul>
       </div>
       <div class="exy-footer__info-container">
-        <span class="exy-footer__info-container-title">Contact</span>
+        <span class="exy-footer__info-container-title" id="trad-contact"></span>
         <ul class="exy-footer__list">
           <li><a class="exy-footer__link" href="mailto:exybore@becauseofprog.fr">Email</a></li>
           <li><a class="exy-footer__link" href="https://twitter.com/exybore">Twitter</a></li>

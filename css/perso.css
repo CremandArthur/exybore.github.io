@@ -232,11 +232,35 @@ div.main-content div.presentation div.tile h3 {
     }
 }
 
-div.main-content div.btn-container {
+@media screen and (max-width: 650px) and (min-width: 570px) {
+    div.first-div div.switch-lang {
+    position: relative;
+    bottom: 33px;
+}
+}
+
+@media screen and (max-width: 570px) {
+  div.first-div div.switch-lang {
+    position: relative;
+    bottom: 100px;
+}
+}
+
+
+div.switch-lang img {
+  width: 50px; 
+  height: auto;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+div.btn-container {
     text-align: center;
     margin-top: 40px;
 }
-div.main-content div.btn-container div.flat-btn a {
+div.btn-container div.flat-btn a {
     padding: 12px 40px 12px 40px;
     background-color: #2A94B8;
     text-transform: uppercase;
@@ -248,11 +272,15 @@ div.main-content div.btn-container div.flat-btn a {
     -webkit-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
 }
-div.main-content div.btn-container div.flat-btn a:hover {
+div.btn-container div.flat-btn a:hover {
     box-shadow: 6px 6px 30px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 6px 6px 30px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 6px 6px 30px 0px rgba(0,0,0,0.75);
     transition: 0.5s;
+}
+
+div.main-content.before-footer {
+  margin-top: 400px;
 }
 
 footer {
@@ -262,7 +290,7 @@ footer {
   background-color: #4F4F4F;
   display: flex;
   justify-content: space-around;
-
+  
 }
 footer div.exy-footer__titler {
   display: flex;
@@ -315,4 +343,8 @@ footer div.exy-footer__info-container ul.exy-footer__list li a.exy-footer__link 
     padding-top: 15px;
     padding-bottom: 15px;
   }
+}
+
+.center {
+  text-align: center;
 }
