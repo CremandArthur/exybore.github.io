@@ -247,13 +247,17 @@ div.main-content div.presentation div.tile h3 {
 }
 
 
-div.switch-lang img {
+div.switch-lang a img {
   width: 50px; 
   height: auto;
   margin-right: 5px;
   margin-left: 5px;
   border-radius: 0px;
   cursor: pointer;
+}
+div.switch-lang a {
+  text-decoration: none;
+  color: inherit;
 }
 
 div.btn-container {
