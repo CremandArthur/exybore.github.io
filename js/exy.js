@@ -104,6 +104,7 @@ if ('language' in localStorage) {
 }
 else {
   localStorage.setItem("language", "en");
+  location.reload();
 }
 
 
