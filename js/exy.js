@@ -39,6 +39,12 @@ window.onload=function(){
     location.reload();
 
   });
+
+  // var images = document.querySelector('img.agrand');
+  // images.addEventListener("click", function () {
+
+  //   document.location.href = images.src;
+  // });
 }
 function tradPage (array) {
         
@@ -52,6 +58,10 @@ function tradPage (array) {
   document.getElementById("trad-projects-2").innerHTML += array['projects'];
   document.getElementById("trad-social-2").innerHTML += array['social'];
   document.getElementById("trad-about-2").innerHTML += array['about'];
+  document.getElementById("trad-home-3").innerHTML += array['home'];
+  document.getElementById("trad-projects-3").innerHTML += array['projects'];
+  document.getElementById("trad-social-3").innerHTML += array['social'];
+  document.getElementById("trad-about-3").innerHTML += array['about'];
   document.getElementById("trad-discover").innerHTML += array['discover'];
   document.getElementById("trad-discoverDesc").innerHTML += array['discoverDesc'];
   document.getElementById("trad-openSource").innerHTML += array['openSource'];
@@ -61,18 +71,17 @@ function tradPage (array) {
   document.getElementById("trad-useful").innerHTML += array['useful'];
   document.getElementById("trad-usefulDesc").innerHTML += array['usefulDesc'];
   document.getElementById("trad-gotoProjects").innerHTML += array['gotoProjects'];
-  document.getElementById("trad-news").innerHTML += array['news'];
-  document.getElementById("trad-newsDesc").innerHTML += array['newsDesc'];
-  document.getElementById("trad-twitter").innerHTML += array['twitter'];
-  document.getElementById("trad-twitterDesc").innerHTML += array['twitterDesc'];
-  document.getElementById("trad-discord").innerHTML += array['discord'];
-  document.getElementById("trad-discordDesc").innerHTML += array['discordDesc'];
-  document.getElementById("trad-bop").innerHTML += array['bop'];
-  document.getElementById("trad-bopDesc").innerHTML += array['bopDesc'];
   document.getElementById("trad-contact").innerHTML += array['contact'];
   document.getElementById("trad-sitemap").innerHTML += array['sitemap'];
   document.getElementById("trad-translate").innerHTML += array['translate'];
   document.getElementById("trad-translateDesc").innerHTML += array['translateDesc'];
+  document.getElementById("trad-aboutMe").innerHTML += array['aboutMe'];
+  document.getElementById("trad-meTitle").innerHTML += array['meTitle'];
+  document.getElementById("trad-meDesc").innerHTML += array['meDesc'];
+  document.getElementById("trad-level").innerHTML += array['level'];
+  document.getElementsByClassName("trad-beginner").innerHTML = array['beginner'];
+  document.getElementsByClassName("trad-intermediate").innerHTML = array['intermediate'];
+  document.getElementsByClassName("trad-expert").innerHTML = array['expert'];
 }
 
 if ('language' in localStorage) {

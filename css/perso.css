@@ -12,6 +12,9 @@ body {
     background-attachment: fixed;
     background-position: center;
 }
+
+
+
 div.first-div {
     
     background-size: cover;
@@ -46,6 +49,12 @@ div.first-div a.flat-button {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
+}
+
+@media screen and (max-width: 600px) {
+  div.first-div img {
+    margin-top: 90px;
+  }
 }
 
 /* mobile nav DON'T SHOW IT */
@@ -212,7 +221,7 @@ hr.sep {
 div.main-content div.presentation div.tile h3 {
     font-size: 30px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 730px) {
     div.main-content div.presentation {
         flex-direction: column;
     }
@@ -232,7 +241,7 @@ div.main-content div.presentation div.tile h3 {
     }
 }
 
-@media screen and (max-width: 650px) and (min-width: 570px) {
+/*@media screen and (max-width: 650px) and (min-width: 570px) {
     div.first-div div.switch-lang {
     position: relative;
     bottom: 33px;
@@ -244,12 +253,12 @@ div.main-content div.presentation div.tile h3 {
     position: relative;
     bottom: 100px;
 }
-}
+}*/
 
 
 div.switch-lang img {
   width: 50px; 
-  height: auto;
+  height: 50px;
   margin-right: 5px;
   margin-left: 5px;
   border-radius: 0px;
@@ -258,6 +267,13 @@ div.switch-lang img {
 div.switch-lang a {
   text-decoration: none;
   color: inherit;
+
+}
+div.switch-lang {
+  display: flex;
+  position: fixed;
+  background-color: #B5B5B5;
+  border-bottom-right-radius: 10px;
 }
 
 div.btn-container {
@@ -331,7 +347,7 @@ footer div.exy-footer__info-container ul.exy-footer__list li a.exy-footer__link 
   color: #fff;
   font-weight: 400 !important;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 
   footer {
     display: flex;
@@ -351,4 +367,124 @@ footer div.exy-footer__info-container ul.exy-footer__list li a.exy-footer__link 
 
 .center {
   text-align: center;
+}
+
+img.agrand {
+  cursor: pointer;
+  
+}
+img.round {
+  border-radius: 1000000px;
+}
+
+div.main-content div.double {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 60px;
+}
+div.main-content div.double div.panel {
+    max-width: 50%;
+    min-width: 50%;
+}
+div.main-content div.double div.panel img {
+    max-width: 90%;
+    max-height: 90%;
+}
+div.main-content div.double div.panel img:hover {
+
+}
+hr.sep {
+    display: none;
+}
+
+div.main-content div.double div.panel h3 {
+    font-size: 33px;
+}
+@media screen and (max-width: 730px) {
+    div.main-content div.double {
+        flex-direction: column;
+    }
+    div.main-content div.double div.panel {
+    max-width: 100%;
+    min-width: 100%;
+    }
+    hr.sep {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    div.main-content div.double {
+        justify-content: space-around;
+    }
+}
+
+div.main-content div.quaterne {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 60px;
+}
+div.main-content div.quaterne div.box {
+    max-width: 25%;
+    min-width: 25%;
+    padding: 5px;
+}
+div.main-content div.quaterne div.box h3 {
+    font-size: 20px;
+}
+div.main-content div.quaterne div.box div.box-img {
+    
+}
+div.main-content div.quaterne div.box div.box-img img {
+    width: 120px;
+    width: 120px;
+}
+div.main-content div.quaterne div.box div.box-img img:hover {
+
+}
+hr.sep {
+    display: none;
+}
+
+div.main-content div.quaterne div.box h3 {
+    font-size: 33px;
+}
+@media screen and (max-width: 730px) {
+    div.main-content div.quaterne {
+        flex-wrap: wrap;
+    }
+    div.main-content div.quaterne div.box {
+    max-width: 40%;
+    min-width: 40%;
+    width: 40%;
+    }
+    hr.sep {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    div.main-content div.quaterne {
+        justify-content: space-around;
+    }
+}
+
+div.help-translate {
+    display: flex;
+    justify-content: center;
+}
+
+div.help-translate a {
+    text-decoration: none;
+    color: inherit;
+}
+div.help-translate a img, div.help-translate img {
+    width: 50px;
+    height: auto;
+    margin-right: 5px;
+    margin-left: 5px;
 }
