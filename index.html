@@ -19,11 +19,51 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/exy.js"></script>
 
+    <script type="text/javascript">
+
+      if ('language' in localStorage) {
+
+        if (localStorage.getItem('language') == "fr") {
+          $.getScript('https://exybore.github.io/exy-trad-platform/langs/french.js', function() {
+      
+            trad(exybore.home);
+            
+          });
+        }
+        else if (localStorage.getItem('language') == "es") {
+          $.getScript('https://exybore.github.io/exy-trad-platform/langs/spanish.js', function() {
+      
+            trad(exybore.home);
+          });
+        }
+        else if (localStorage.getItem('language') == "en") {
+          $.getScript('https://exybore.github.io/exy-trad-platform/langs/english.js', function() {
+      
+            trad(exybore.home);
+          });
+        }
+        else {
+          $.getScript('https://exybore.github.io/exy-trad-platform/langs/english.js', function() {
+      
+            trad(exybore.home);
+        });
+
+        
+      }
+
+    }
+    else {
+      localStorage.setItem("language", "en");
+      location.reload();
+    }
+
+    </script>
+
     <div class="switch-lang">
         
-          <img src="icons/uk.png" alt="UK flag // Made by Freepik on http://www.flaticon.com" id="switch-en">
-          <img src="icons/france.png" alt="France flag // Made by Freepik on http://www.flaticon.com" id="switch-fr">
-          <img src="icons/spain.png" alt="Spain flag // Made by Freepik on http://www.flaticon.com" id="switch-es">
+          <img src="https://exybore.github.io/exy-trad-platform/flags/uk.png" alt="UK flag // Made by Freepik on http://www.flaticon.com" id="switch-en">
+          <img src="https://exybore.github.io/exy-trad-platform/flags/france.png" alt="France flag // Made by Freepik on http://www.flaticon.com" id="switch-fr">
+          <img src="https://exybore.github.io/exy-trad-platform/flags/spain.png" alt="Spain flag // Made by Freepik on http://www.flaticon.com" id="switch-es">
 
       </div>
 
@@ -31,8 +71,8 @@
 
       <img src="img/profil.png" alt="profil img" />
 
-      <h1 id="trad-mainTitle"></h1>
-      <h3 id="trad-description"></h3>
+      <h1 class="trad-mainTitle"></h1>
+      <h3 class="trad-description"></h3>
 
      
 
@@ -48,25 +88,25 @@
         <span class="exy-header__title">Exybore</span>
       </div>
       <div class="exy-header__link-container">
-        <a href="#!" class="exy-header__link" id="trad-home-3"></a>
-        <a href="#!" class="exy-header__link" id="trad-projects-3"></a>
-        <a href="#!" class="exy-header__link" id="trad-social-3"></a>
-        <a href="#!" class="exy-header__link" id="trad-about-3"></a>
+        <a href="#!" class="exy-header__link trad-menuHome"></a>
+        <a href="#!" class="exy-header__link trad-menuProjects"></a>
+        <a href="#!" class="exy-header__link trad-menuSocial"></a>
+        <a href="#!" class="exy-header__link trad-menuAbout"></a>
       </div>
     </header>
     <ul class="exy-header__mobile-nav">
-      <li><a href="#!" class="exy-header__link" id="trad-home"></a></li>
-      <li><a href="#!" class="exy-header__link" id="trad-projects"></a></li>
-      <li><a href="#!" class="exy-header__link" id="trad-social"></a></li>
-      <li><a href="#!" class="exy-header__link" id="trad-about"></a></li>
+      <li><a href="#!" class="exy-header__link trad-menuHome"></a></li>
+      <li><a href="#!" class="exy-header__link trad-menuProjects"></a></li>
+      <li><a href="#!" class="exy-header__link trad-menuSocial"></a></li>
+      <li><a href="#!" class="exy-header__link trad-menuAbout"></a></li>
       <li><a href="#!" class="exy-header__link exy-header__close-mobile"><i class="material-icons">close</i></a></li>
     </ul>
 
     <div class="main-content">
 
-      <h2 id="trad-discover"></h2>
+      <h2 class="trad-discover"></h2>
 
-      <p id="trad-discoverDesc"></p>
+      <p class="trad-discoverDesc"></p>
 
       <div class="presentation">
 
@@ -74,8 +114,8 @@
           <div class="tile-img">
             <img src="icons/fork.png" alt="Icon made by Dave Gandy from www.flaticon.com" />
           </div>
-          <h3 id="trad-openSource"></h3>
-          <p id="trad-openSourceDesc"></p>
+          <h3 class="trad-openSource"></h3>
+          <p class="trad-openSourceDesc"></p>
         </div>
         <hr class="sep" />
 
@@ -83,8 +123,8 @@
           <div class="tile-img">
             <img src="icons/check.png" alt="Icon made by Maxim Basinski from www.flaticon.com" />
           </div>
-          <h3 id="trad-simple"></h3>
-          <p id="trad-simpleDesc"></p>
+          <h3 class="trad-simple"></h3>
+          <p class="trad-simpleDesc"></p>
         </div>
 
         <hr class="sep" />
@@ -93,8 +133,8 @@
           <div class="tile-img">
             <img src="icons/like.png" alt="Like // Icon made by Madebyoliver from www.flaticon.com">
           </div>
-          <h3 id="trad-useful"></h3>
-          <p id="trad-usefulDesc"></p>
+          <h3 class="trad-useful"></h3>
+          <p class="trad-usefulDesc"></p>
         </div>
 
       </div>
@@ -102,7 +142,7 @@
       <div class="btn-container">
 
         <div class="flat-btn">
-          <a href="/projects" id="trad-gotoProjects"></a>
+          <a href="/projects" class="trad-gotoProjects"></a>
         </div>
 
       </div>
@@ -111,7 +151,7 @@
 
     <div class="main-content darken">
 
-      <h2 id="trad-aboutMe"></h2>
+      <h2 class="trad-aboutMe"></h2>
 
       <div class="double">
 
@@ -125,9 +165,9 @@
 
         <div class="panel">
 
-          <h3 id="trad-meTitle"></h3>
+          <h3 class="trad-meTitle"></h3>
 
-          <p id="trad-meDesc"></p>
+          <p class="trad-meDesc"></p>
 
         </div>
 
@@ -137,7 +177,7 @@
 
     <div class="main-content">
 
-      <h2 id="trad-level"></h2>
+      <h2 class="trad-level"></h2>
 
       <div class="quaterne">
 
@@ -213,22 +253,22 @@
 
     <div class="main-content before-footer center">
 
-      <h2 id="trad-translate"></h2>
+      <h2 class="trad-translate"></h2>
 
-      <p id="trad-translateDesc" class="center"></p>
+      <p class="trad-translateDesc" class="center"></p>
 
       <div class="help-translate">
         
-          <a href="https://github.com/Exybore/exy-trad-platform/blob/master/english.js">
-            <img src="icons/uk.png" alt="UK flag // Made by Freepik on http://www.flaticon.com" style="width: 50px;">
+          <a href="https://github.com/Exybore/exy-trad-platform/blob/master/langs/english.js">
+            <img src="https://exybore.github.io/exy-trad-platform/flags/uk.png" alt="UK flag // Made by Freepik on http://www.flaticon.com" style="width: 50px;">
           </a>
 
-          <a href="https://github.com/Exybore/exy-trad-platform/blob/master/french.js">
-            <img src="icons/france.png" alt="France flag // Made by Freepik on http://www.flaticon.com" style="width: 50px;">
+          <a href="https://github.com/Exybore/exy-trad-platform/blob/master/langs/french.js">
+            <img src="https://exybore.github.io/exy-trad-platform/flags/france.png" alt="France flag // Made by Freepik on http://www.flaticon.com" style="width: 50px;">
           </a>
 
-          <a href="https://github.com/Exybore/exy-trad-platform/blob/master/spanish.js">
-            <img src="icons/spain.png" alt="Spain flag // Made by Freepik on http://www.flaticon.com" style="width: 50px;">
+          <a href="https://github.com/Exybore/exy-trad-platform/blob/master/langs/spanish.js">
+            <img src="https://exybore.github.io/exy-trad-platform/flags/spain.png" alt="Spain flag // Made by Freepik on http://www.flaticon.com" style="width: 50px;">
           </a>
           <img src="icons/like.png" alt="Like // Icon made by Madebyoliver from www.flaticon.com" style="height: 50px !important;">
 
@@ -242,16 +282,16 @@
         <span class="exy-footer__title">Exybore</span>
       </div>
       <div class="exy-footer__info-container">
-        <span class="exy-footer__info-container-title" id="trad-sitemap"></span>
+        <span class="exy-footer__info-container-title trad-sitemap"></span>
         <ul class="exy-footer__list">
-          <li><a href="/" class="exy-footer__link" id="trad-home-2"></a></li>
-          <li><a href="/projects" class="exy-footer__link" id="trad-projects-2"></a></li>
-          <li><a href="/social" class="exy-footer__link" id="trad-social-2"></a></li>
-          <li><a href="/about" class="exy-footer__link" id="trad-about-2"></a></li>
+          <li><a href="/" class="exy-footer__link trad-menuHome"></a></li>
+          <li><a href="/projects" class="exy-footer__link trad-menuProjects"></a></li>
+          <li><a href="/social" class="exy-footer__link trad-menuSocial"></a></li>
+          <li><a href="/about" class="exy-footer__link trad-menuAbout"></a></li>
         </ul>
       </div>
       <div class="exy-footer__info-container">
-        <span class="exy-footer__info-container-title" id="trad-contact"></span>
+        <span class="exy-footer__info-container-title trad-contact"></span>
         <ul class="exy-footer__list">
           <li><a class="exy-footer__link" href="mailto:exybore@becauseofprog.fr">Email</a></li>
           <li><a class="exy-footer__link" href="https://twitter.com/exybore">Twitter</a></li>
