@@ -47,39 +47,6 @@ window.onload=function(){
   // });
 }
 
-
-if ('language' in localStorage) {
-
-    if (localStorage.getItem('language') == "fr") {
-      $.getScript('https://exybore.github.io/exy-trad-platform/langs/french.js', function() {
-  
-        trad(exybore.universal);
-        
-      });
-    }
-    else if (localStorage.getItem('language') == "es") {
-      $.getScript('https://exybore.github.io/exy-trad-platform/langs/spanish.js', function() {
-  
-        trad(exybore.universal);
-      });
-    }
-    else if (localStorage.getItem('language') == "en") {
-      $.getScript('https://exybore.github.io/exy-trad-platform/langs/english.js', function() {
-  
-        trad(exybore.universal);
-      });
-    }
-    else {
-      $.getScript('https://exybore.github.io/exy-trad-platform/langs/english.js', function() {
-  
-        trad(exybore.universal);
-    });
-
-    
-  }
-}
-else {
-  localStorage.setItem("language", "en");
-  location.reload();
-}
-
+$.getScript('https://exybore.github.io/exy-trad-platform/functions/check.js', function() {
+  check("exybore", "universal");
+});

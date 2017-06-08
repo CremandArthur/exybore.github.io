@@ -21,43 +21,11 @@
 
     <script type="text/javascript">
 
-      if ('language' in localStorage) {
+      $.getScript('https://exybore.github.io/exy-trad-platform/functions/check.js', function() {
+        check("exybore", "home");
+      });
 
-        if (localStorage.getItem('language') == "fr") {
-          $.getScript('https://exybore.github.io/exy-trad-platform/langs/french.js', function() {
-      
-            trad(exybore.home);
-            
-          });
-        }
-        else if (localStorage.getItem('language') == "es") {
-          $.getScript('https://exybore.github.io/exy-trad-platform/langs/spanish.js', function() {
-      
-            trad(exybore.home);
-          });
-        }
-        else if (localStorage.getItem('language') == "en") {
-          $.getScript('https://exybore.github.io/exy-trad-platform/langs/english.js', function() {
-      
-            trad(exybore.home);
-          });
-        }
-        else {
-          $.getScript('https://exybore.github.io/exy-trad-platform/langs/english.js', function() {
-      
-            trad(exybore.home);
-        });
-
-        
-      }
-
-    }
-    else {
-      localStorage.setItem("language", "en");
-      location.reload();
-    }
-
-    </script>
+      </script>
 
     <div class="switch-lang">
         
@@ -177,6 +145,14 @@
 
     <div class="main-content">
 
+      <script type="text/javascript">
+
+      $.getScript('https://exybore.github.io/exy-trad-platform/functions/check.js', function() {
+        check("exybore", "devLevel");
+      });
+
+      </script>
+
       <h2 class="trad-level"></h2>
 
       <div class="quaterne">
@@ -186,7 +162,7 @@
             <img src="icons/cpp.ico" alt="c++">
           </div>
           <h3>C++</h3>
-          <p>I have the base concept of C++ and I know the Object-Oriented programmation.</p>
+          <p class="trad-cpp"></p>
         </div>
 
         <div class="box">
@@ -194,7 +170,7 @@
             <img src="icons/qt.ico" alt="qt">
           </div>
           <h3>Qt</h3>
-          <p>I know how to build basic windows and interactions.</p>
+          <p class="trad-qt"></p>
         </div>
 
         <div class="box">
@@ -202,7 +178,7 @@
             <img src="icons/html.ico" alt="html">
           </div>
           <h3>HTML5 / CSS3</h3>
-          <p>I perfecly control HTML5 and CSS3 and I create my 100% own websites today.</p>
+          <p class="trad-htmlcss"></p>
         </div>
 
         <div class="box">
@@ -210,7 +186,7 @@
             <img src="icons/javascript.ico" alt="javascript">
           </div>
           <h3>JavaScript</h3>
-          <p>I learn progressively JavaScript. I'm a beginner but I make great things.</p>
+          <p class="trad-js"></p>
         </div>
       </div>
 
@@ -221,7 +197,7 @@
             <img src="icons/php.ico" alt="php">
           </div>
           <h3>PHP</h3>
-          <p>I make my dynamic websites with, but I don't want to keep it in the future. #rails</p>
+          <p class="trad-php"></p>
         </div>
 
         <div class="box">
@@ -229,7 +205,7 @@
             <img src="icons/vb_net.ico" alt="vb.net">
           </div>
           <h3>VB.NET</h3>
-          <p>I know basics of this basic language, but I'm no longer programming in.</p>
+          <p class="trad-vb"></p>
         </div>
 
         <div class="box">
@@ -237,15 +213,15 @@
             <img src="icons/ruby.ico" alt="ruby">
           </div>
           <h3>Ruby</h3>
-          <p>I'm a beginner in Ruby, and the last time I have developed a Ruby app, it was 1 year ago.</p>
+          <p class="trad-ruby"></p>
         </div>
 
         <div class="box">
           <div class="box-img">
             <img src="icons/chrome.png" alt="chrome extensions">
           </div>
-          <h3>Chrome extensions</h3>
-          <p>I know how to make Chrome extensions, because I know HTML and CSS.</p>
+          <h3 class="trad-extTitle"></h3>
+          <p class="trad-extDesc"></p>
         </div>
       </div>
 
